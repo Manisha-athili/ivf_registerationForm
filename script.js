@@ -16,7 +16,7 @@ document.querySelector("form").addEventListener("submit", async function(event) 
   
   try {
     // Send a POST request to the JSON server
-    const response = await fetch("http://localhost:3000/registrations", { // Update URL if different
+    const response = await fetch("https://ivf-registerationform.onrender.com/registrations", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
