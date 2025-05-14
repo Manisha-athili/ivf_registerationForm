@@ -193,3 +193,27 @@ form .button input:hover {
     flex-direction: column;
   }
 }
+/* Optional: group both buttons side by side or stacked */
+.button-group {
+  display: flex;
+  flex-direction: column; /* or row for horizontal */
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Match the "Register" button style */
+.styled-button {
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.styled-button:hover {
+  background: linear-gradient(135deg, #9b59b6, #71b7e6);
+}
