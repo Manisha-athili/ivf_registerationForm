@@ -1,3 +1,14 @@
 {
-  "registrations": []
+  "registrations": [
+    {
+      "id": "00a6",
+      "fullName": "some1",
+      "email": "manishaathili1126@gmail.com",
+      "phone": null,
+      "age": "22",
+      "consultancy": "iui",
+      "tryingYears": "1",
+      "gender": "Male"
+    }
+  ]
 }

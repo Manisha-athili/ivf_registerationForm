@@ -91,9 +91,25 @@
         <div class="button">
           <input type="submit" value="Register">
         </div>
+        <button id="downloadExcel" class="button">Download Data as Excel</button>
+
       </form>
     </div>
   </div>
  <script src="script.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+  document.getElementById("downloadExcel").addEventListener("click", async () => {
+    const response = await fetch("http://localhost:3000/registrations");
+    const data = await response.json();
+
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Registrations");
+
+    XLSX.writeFile(workbook, "registrations.xlsx");
+  });
+</script>
+
 </body>
 </html>
