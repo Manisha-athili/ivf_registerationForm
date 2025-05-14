@@ -5,11 +5,11 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
-// Enable CORS for your frontend domain
+// Enable CORS for your GitHub Pages domain
 server.use(cors({
   origin: 'https://manisha-athili.github.io',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type']
 }));
 
 server.use(middlewares);
